@@ -8,10 +8,8 @@ var port = process.env.PORT;
 // Init App
 var app = express();
 
-
 // User Morgan Logger Middleware
 app.use(morgan("dev"));
-
 
 app.get("/", function(req, res) {
     console.log(req.headers);
@@ -21,11 +19,6 @@ app.get("/", function(req, res) {
         lang: req.headers["accept-language"]
     });
 });
-
-
-
-
-
 
 app.listen(port, function() {
     console.log("Server running on port: " + port);
