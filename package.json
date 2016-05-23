@@ -1,0 +1,23 @@
+{
+  "name": "req-header-parser",
+  "version": "1.0.0",
+  "description": "Simple parser for request headers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zinscky/req-header-parser.git"
+  },
+  "author": "Tenzin Vicky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zinscky/req-header-parser/issues"
+  },
+  "homepage": "https://github.com/zinscky/req-header-parser#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
+  }
+}
