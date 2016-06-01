@@ -12,11 +12,18 @@ var app = express();
 app.use(morgan("dev"));
 
 app.get("/", function(req, res) {
-    console.log(req.headers);
+    //console.log(req.connection.remoteAddress);
     res.json({
         IP: req.headers["x-forwarded-for"],
-        OS: req.headers["user-agent"],
-        lang: req.headers["accept-language"]
+        OS: req.headers["user-agent"].match(/\(.*?\)/)[0],
+        lang: req.headers["accept-language"].split(",")[0]
+    });
+});
+
+app.get("*", function(req, res) {
+    res.status(404).json({
+        success: false,
+        message: "404: Page Not Found"
     });
 });
 
